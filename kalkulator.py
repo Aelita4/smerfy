@@ -1,3 +1,5 @@
+
+
 print("Le kalkulator")
 one = int(input("Działanie: "))
 oper = input()
@@ -14,3 +16,5 @@ else:
         print(str(one) + oper + str(two) + "=" + str(one * two))
     elif oper == "/":
         print(str(one) + oper + str(two) + "=" + str(one / two))
+    else:
+        print("Nie można wykonać operacji!")
