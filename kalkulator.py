@@ -1,20 +1,22 @@
+if __name__ == '__main__':
+    print("To je moduł debilu")
 
+def kalkulator():
+    print("Le kalkulator")
+    one = int(input("Działanie: "))
+    oper = input()
+    two = int(input())
 
-print("Le kalkulator")
-one = int(input("Działanie: "))
-oper = input()
-two = int(input())
-
-if oper == "/" and two == 0:
-    print("Nie dziel cholero przez zero")
-else:
-    if oper == "+":
-        print(str(one) + oper + str(two) + "=" + str(one + two))
-    elif oper == "-":
-        print(str(one) + oper + str(two) + "=" + str(one - two))
-    elif oper == "*":
-        print(str(one) + oper + str(two) + "=" + str(one * two))
-    elif oper == "/":
-        print(str(one) + oper + str(two) + "=" + str(one / two))
+    if oper == "/" and two == 0:
+        print("Nie dziel cholero przez zero")
     else:
-        print("Nie można wykonać operacji!")
+        if oper == "+":
+            print(str(one) + oper + str(two) + "=" + str(one + two))
+        elif oper == "-":
+            print(str(one) + oper + str(two) + "=" + str(one - two))
+        elif oper == "*":
+            print(str(one) + oper + str(two) + "=" + str(one * two))
+        elif oper == "/":
+            print(str(one) + oper + str(two) + "=" + str(one / two))
+        else:
+            print("Nie można wykonać operacji!")
