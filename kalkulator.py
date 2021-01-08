@@ -1,9 +1,14 @@
-
-
 print("Le kalkulator")
-one = int(input("Działanie: "))
+
+one = input("Działanie: \n")
+
+check_int = isinstance(one, int)
+
+if check_int == False :
+    print("To nie liczba")
+
 oper = input()
-two = int(input())
+two = input()
 
 if oper == "/" and two == 0:
     print("Nie dziel cholero przez zero")
