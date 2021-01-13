@@ -2,24 +2,29 @@ print("Le kalkulator")
 
 one = input("Działanie: \n")
 
-check_int = isinstance(one, int)
-
-if check_int == False :
+try:
+    t = int(one)
+except ValueError:
     print("To nie liczba")
 
 oper = input()
 two = input()
 
-if oper == "/" and two == 0:
+try:
+    t2 = int(two)
+except ValueError:
+    print("To nie liczba")
+
+if oper == "/" and t2 == 0:
     print("Nie dziel cholero przez zero")
 else:
     if oper == "+":
-        print(str(one) + oper + str(two) + "=" + str(one + two))
+        print(str(t) + oper + str(t2) + "=" + str(t + t2))
     elif oper == "-":
-        print(str(one) + oper + str(two) + "=" + str(one - two))
+        print(str(t) + oper + str(t2) + "=" + str(t - t2))
     elif oper == "*":
-        print(str(one) + oper + str(two) + "=" + str(one * two))
+        print(str(t) + oper + str(t2) + "=" + str(t * t2))
     elif oper == "/":
-        print(str(one) + oper + str(two) + "=" + str(one / two))
+        print(str(t) + oper + str(t2) + "=" + str(t / t2))
     else:
         print("Nie można wykonać operacji!")
