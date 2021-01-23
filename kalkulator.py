@@ -13,8 +13,7 @@ while True:
         continue
 
     oper = input()
-    if oper != "+" or "-"  or "*" or "/":
-        continue
+
 
     two = input()
 
@@ -23,7 +22,7 @@ while True:
     except ValueError:
         print("To nie liczba")
         continue
-    continue
+
 
 
 
@@ -33,11 +32,16 @@ while True:
     else:
         if oper == "+":
             print(str(t) + oper + str(t2) + "=" + str(t + t2))
+            break
         elif oper == "-":
             print(str(t) + oper + str(t2) + "=" + str(t - t2))
+            break
         elif oper == "*":
             print(str(t) + oper + str(t2) + "=" + str(t * t2))
+            break
         elif oper == "/":
             print(str(t) + oper + str(t2) + "=" + str(t / t2))
+            break
         else:
             print("Nie można wykonać operacji!")
+            continue
