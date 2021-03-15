@@ -1,6 +1,7 @@
+import main
 
 def save_file():
-    inp = text_box.get(1.0, "end-1c")
+
     text_file = open("sample.txt", "w")
-    n = text_file.write(inp)
+    n = text_file.write(input)
     print(inp)
