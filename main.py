@@ -1,14 +1,28 @@
 import tkinter as tk
+import os.path
 
 from tOpen import open_file
 
 def save_file():
+    fileNr = 0
+    fileNr = fileNr + 1
     inp = text_box.get(1.0, "end-1c")
     file_name = e.get()
 
+    if file_name == "":
+        file_name = "New File"
+
+
+
+
+    if os.path.isfile('Text_Files/' + file_name):
+        file_name = file_name + " " + str(fileNr)
+
+
+
     text_file = open("Text_Files/" + file_name, "w")
     n = text_file.write(inp)
-    print(inp)
+    print("Plik został zapisany jako *" + file_name + "* | w " + "*Text_Files*"  )
 
 window = tk.Tk()
 
