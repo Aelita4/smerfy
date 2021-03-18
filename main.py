@@ -4,21 +4,17 @@ import os.path
 from tOpen import open_file
 
 def save_file():
+
     fileNr = 0
-    fileNr = fileNr + 1
     inp = text_box.get(1.0, "end-1c")
     file_name = e.get()
 
     if file_name == "":
         file_name = "New File"
 
-
-
-
     if os.path.isfile('Text_Files/' + file_name):
-        file_name = file_name + " " + str(fileNr)
-
-
+        fileNr += 1
+        file_name += " " + str(fileNr)
 
     text_file = open("Text_Files/" + file_name, "w")
     n = text_file.write(inp)
@@ -68,11 +64,8 @@ btn2.grid(row=0, column=2, sticky="we")
 btn3.grid(row=0, column=3, sticky="we")
 btn4.grid(row=0, column=4, sticky="we")
 
-
 text_box = tk.Text(width=115)
 text_box.grid(columnspan=6)
-
-
 
 window.title("Notatnik")
 window.mainloop()
